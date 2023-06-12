@@ -44,7 +44,13 @@ public:
         cars = new Car[1000];
         parking_numbers = new Parking_Numbers[1000];
     }
-
+    ~Parking() 
+    {
+        delete[] cars;
+        cars = nullptr;
+        delete[] parking_numbers;
+        parking_numbers = nullptr;
+    }
     void add_car(string brand, string number){}
     
     void remove_car(int parking_number){}
